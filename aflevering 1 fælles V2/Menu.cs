@@ -8,18 +8,5 @@ namespace aflevering_1_fælles_V2
         public Menu(string _title) :
             base(_title)
         { }
-        public bool ExpandMenuItem()
-        {
-            running = true;
-            bool LeaveMenu;
-            do
-            {
-                DrawMenu();
-                LeaveMenu = HandleInput();
-            }
-            while (running);
-
-            return LeaveMenu;
-        }
     }
 }

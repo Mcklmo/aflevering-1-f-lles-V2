@@ -68,7 +68,7 @@ namespace aflevering_1_fælles_V2
             ));
             menu.Add(menu2);
             menu.Add(new InfiniteMenu("Uendelig menu"));
-            menu.ExpandMenuItem();
+            menu.Start();
         }
     }
 }

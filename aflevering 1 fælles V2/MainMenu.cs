@@ -59,5 +59,22 @@ namespace aflevering_1_fælles_V2
             }
             return true;
         }
+        public bool Start()
+        {
+            running = true;
+            bool LeaveMenu;
+            do
+            {
+                DrawMenu();
+                LeaveMenu = HandleInput();
+            }
+            while (running);
+
+            return LeaveMenu;
+        }
+        public bool ExpandMenuItem()
+        {
+            return Start();
+        }
     }
 }
