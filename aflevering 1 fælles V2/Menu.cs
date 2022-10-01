@@ -8,10 +8,6 @@ namespace aflevering_1_fælles_V2
         public Menu(string _title) :
             base(_title)
         { }
-        public void Start()
-        {
-            ExpandMenuItem();
-        }
         public bool ExpandMenuItem()
         {
             running = true;
