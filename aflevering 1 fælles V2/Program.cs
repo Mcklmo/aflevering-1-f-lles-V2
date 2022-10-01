@@ -10,7 +10,7 @@ namespace aflevering_1_fælles_V2
     {
         static void Main(string[] args)
         {
-            moritz();
+            Moritz();
             //malthe();
         }
         //private static void malthe()
@@ -31,7 +31,7 @@ namespace aflevering_1_fælles_V2
         //    baseMenu.Show();
         //}
 
-        private static void moritz()
+        private static void Moritz()
         {
             Menu menu = new Menu(" fancymenu ");
             menu.Add(
@@ -67,6 +67,7 @@ namespace aflevering_1_fælles_V2
                     " Indhold af punkt 3... det er indtil videre også bare tekst "
             ));
             menu.Add(menu2);
+            menu.Add(new InfiniteMenu("Uendelig menu"));
             menu.Start();
         }
     }

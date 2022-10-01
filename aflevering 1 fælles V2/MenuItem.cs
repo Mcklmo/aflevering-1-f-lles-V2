@@ -2,15 +2,18 @@
 
 namespace aflevering_1_fælles_V2
 {
-    public class MenuItem : MainMenu, IMenuItem
+    public class MenuItem :  IMenuItem
 
     {
-        public MenuItem(string _title,string _content):
-            base(_title)
+        public MenuItem(string _title,string _content)
         { 
-            Content = _content; 
+            Content = _content;
+            _Title = _title;
         }
         string Content;
+        public string _Title;
+        public string Title()
+        { return _Title; }
         public bool ExpandMenuItem()
         {
             Console.Clear();
