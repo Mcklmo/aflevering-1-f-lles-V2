@@ -59,7 +59,7 @@ namespace aflevering_1_fælles_V2
             }
             return true;
         }
-        public bool Start()
+        public bool Expand()
         {
             running = true;
             bool LeaveMenu;
@@ -74,7 +74,7 @@ namespace aflevering_1_fælles_V2
         }
         public bool ExpandMenuItem()
         {
-            return Start();
+            return Expand();
         }
     }
 }

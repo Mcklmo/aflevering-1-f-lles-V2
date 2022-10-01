@@ -13,7 +13,7 @@
             Add(new InfiniteMenu("infinitemenu 5"));
             Add(new InfiniteMenu("infinitemenu 6"));
             Add(new InfiniteMenu("infinitemenu 7"));
-            return Start();
+            return Expand();
         }
     }
 }
