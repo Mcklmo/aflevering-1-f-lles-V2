@@ -10,6 +10,29 @@ namespace aflevering_1_fælles_V2
     {
         static void Main(string[] args)
         {
+            moritz();
+            //malthe();
+        }
+        //private static void malthe()
+        //{
+        //    IMenu baseMenu = new CustomMenu("Menu", "Dette er den første menu");
+
+        //    baseMenu.Add(new CustomMenu("Menu 1", "Dette er den første menu"));
+
+        //    IMenu menu2 = new CustomMenu("Menu 2", "Dette er den anden menu");
+
+        //    menu2.Add(new CustomMenu("Menu 2-1", "Dette er den anden-første menu"));
+        //    menu2.Add(new CustomMenu("Menu 2-2", "Dette er den anden-anden  menu"));
+
+        //    baseMenu.Add(menu2);
+        //    baseMenu.Add(new FileSystemMenu("File system", "C:\\Users\\malth\\Desktop"));
+
+
+        //    baseMenu.Show();
+        //}
+
+        private static void moritz()
+        {
             Menu menu = new Menu(" fancymenu ");
             menu.Add(
                 new MenuItem(
@@ -44,15 +67,7 @@ namespace aflevering_1_fælles_V2
                     " Indhold af punkt 3... det er indtil videre også bare tekst "
             ));
             menu.Add(menu2);
-            try
-            {
-                menu.Start();
-            }
-            catch (Exception e)
-            { // smart way to stop the program when the user hits enter
-                if (e.Message == "done") { }
-                else throw e; 
-            }
+            menu.Start();
         }
     }
 }

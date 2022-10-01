@@ -21,7 +21,7 @@ namespace aflevering_1_fælles_V2
             ExpandMenuItem();
         }
         private bool HandleInput()
-            {
+        {
             ConsoleKeyInfo cki = Console.ReadKey();
             switch (cki.Key)
             {
@@ -31,7 +31,6 @@ namespace aflevering_1_fælles_V2
                 case ConsoleKey.Escape:
                     running = false;
                     return false;
-                    //throw new Exception("done");
                 case ConsoleKey.UpArrow:
                     selected = selected == 0 ? Items.Count - 1 : selected - 1;
                     break;
@@ -46,6 +45,7 @@ namespace aflevering_1_fælles_V2
         }
         public bool ExpandMenuItem()
         {
+            running = true;
             bool LeaveMenu;
             do
             {
