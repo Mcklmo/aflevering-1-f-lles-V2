@@ -21,7 +21,7 @@ namespace aflevering_1_fælles_V2
             }
             foreach (FileInfo item in directoryInfo.GetFiles())
             {
-                Add(new MenuItem(item.Name, item.FullName));
+                Add(new FileItem(item.Name, item.FullName));
             }
             return Expand(); 
         }
