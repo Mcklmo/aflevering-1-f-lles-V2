@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Design;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,6 +69,7 @@ namespace aflevering_1_fælles_V2
             ));
             menu.Add(menu2);
             menu.Add(new InfiniteMenu("Uendelig menu"));
+            menu.Add(new FileSystemMenu("Browse my Drive", new DirectoryInfo("C:\\Users\\User\\OneDrive - Aalborg Universitet\\Uni")));
             menu.ExpandMenuItem();
         }
     }
