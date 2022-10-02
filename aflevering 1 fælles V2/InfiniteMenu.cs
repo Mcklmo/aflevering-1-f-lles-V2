@@ -3,10 +3,11 @@
     internal class InfiniteMenu : MainMenu, IMenuItem
     {
 
-        public InfiniteMenu(string _title):
+        public InfiniteMenu(string _title) :
             base(_title) { }
         public new bool ExpandMenuItem()
         {
+            Items.Clear(); // prevent adding additional 6 menues everytime a menu is opened
             Add(new InfiniteMenu("infinitemenu 2"));
             Add(new InfiniteMenu("infinitemenu 3"));
             Add(new InfiniteMenu("infinitemenu 4"));
