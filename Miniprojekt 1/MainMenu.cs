@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System;
 
-namespace aflevering_1_fælles_V2
+namespace Miniprojekt_1
 {
     public abstract class MainMenu {
         public MainMenu(string _title)

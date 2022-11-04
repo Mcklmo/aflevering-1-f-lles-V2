@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE6DD3EC-0C02-4C82-9FE4-A32D4AE3B451}</ProjectGuid>
+    <ProjectGuid>{DCA67B6D-F8BE-4E40-A0C3-C74741161329}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>aflevering_1_fælles_V2</RootNamespace>
-    <AssemblyName>aflevering 1 fælles V2</AssemblyName>
+    <RootNamespace>_7_Delegates</RootNamespace>
+    <AssemblyName>7 Delegates</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileItem.cs" />
-    <Compile Include="FileSystemMenu.cs" />
-    <Compile Include="IMenuItem.cs" />
-    <Compile Include="InfiniteMenu.cs" />
-    <Compile Include="MainMenu.cs" />
-    <Compile Include="Menu.cs" />
-    <Compile Include="MenuItem.cs" />
+    <Compile Include="KG7.cs" />
+    <Compile Include="Practise.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

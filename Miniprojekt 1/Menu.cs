@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace aflevering_1_fælles_V2
+namespace Miniprojekt_1
+
 {
     public class Menu : MainMenu, IMenuItem
     {

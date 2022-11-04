@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 
-namespace aflevering_1_fælles_V2
+namespace Miniprojekt_1
 {
-    internal class FileSystemMenu : MainMenu, IMenuItem
+    public class FileSystemMenu : MainMenu, IMenuItem
     {
         private DirectoryInfo directoryInfo;
 
