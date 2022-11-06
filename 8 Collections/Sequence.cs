@@ -5,46 +5,96 @@ using System.Runtime.Remoting.Messaging;
 
 namespace _8_Collections
 {
-    public class Sequence : IEnumerator<int>
+    public class Sequence : IEnumerable<int>
     {
-
-        List<int> l = new List<int>();
-        public int current;
-        public int start, end, skip;
-
-        public int Current => l[current];
-        public Sequence(List<int> _l,int _start,int _end,int _skip)
+        public int Start { get; }
+        public int Skip { get; }
+        public int Count { get; }
+        private bool Unlimited { get; }
+        private bool Fib = false;
+        public Sequence(int start, int skip)
         {
-            l = _l;
-            start = _start;
-            current = start;
-            end = _end;
-            skip = _skip;
+            Start = start;
+            Skip = skip;
+            Unlimited = true;
         }
-
-        object IEnumerator.Current => l[current];
-
-        public void Dispose()
+        public Sequence(int start, int skip, int count)
         {
-            // :) :)
+            Start = start;
+            Skip = skip;
+            Count = count;
         }
-        public IEnumerator GetEnumerator()
+        public Sequence(string fib, int count)
         {
-            return l.GetEnumerator();
-        }
-
-        public bool MoveNext()
-        {
-            if (l.Count <= start ||end <= current-1+skip)
+            Start = 1;
+            Count = count;
+            if (fib == "f")
             {
-                return false;
-            }
-            return true;
-        }
+                Fib = true;
 
-        public void Reset()
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
+        }
+        public IEnumerator<int> GetEnumerator() { 
+            if (Fib) 
+                return new FibEnumerator(this);
+            else 
+                return new SequenceEnumerator(this); 
+        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        private class FibEnumerator : IEnumerator<int>
         {
-            current = 0;
+            Sequence Sequence { get; }
+            public FibEnumerator(Sequence sequence)
+            {
+                Sequence = sequence;
+                Reset();
+            }
+            public int Count { get; private set; }
+            public int Current { get; private set; }
+            public int Previous { get; private set; }
+            public int Next { get; private set; }
+            object IEnumerator.Current => Current;
+            public void Dispose() { }
+            public bool MoveNext()
+            {
+                Next = Current + Previous;
+                Previous = Current;
+                Current = Next;
+                return Count-- > 0 || Sequence.Unlimited;
+            }
+            public void Reset()
+            {
+                Count = Sequence.Count;
+                Current = Sequence.Start;
+                Previous = 0;
+            }
+        }
+        private class SequenceEnumerator : IEnumerator<int>
+        {
+            Sequence Sequence { get; }
+            public SequenceEnumerator(Sequence sequence)
+            {
+                Sequence = sequence;
+                Reset();
+            }
+            public int Count { get; private set; }
+            public int Current { get; private set; }
+            object IEnumerator.Current => Current;
+            public void Dispose() { }
+            public bool MoveNext()
+            {
+                Current += Sequence.Skip;
+                return Count-- > 0 || Sequence.Unlimited;
+            }
+            public void Reset()
+            {
+                Count = Sequence.Count;
+                Current = Sequence.Start - Sequence.Skip;
+            }
         }
     }
 }

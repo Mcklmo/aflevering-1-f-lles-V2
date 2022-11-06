@@ -33,11 +33,18 @@ namespace OOP_Kursus
             Ex1();
             void Ex1()
             {
-                Sequence se = new Sequence(new List<int> { 1,2,3,4,5,6,7,8},1,3,2);
-                foreach(int i in se)
+                Sequence se = new Sequence(1, 2, 60);
+                foreach (int i in se)
                 {
                     Console.Write($"{i} ");
                 }
+                Console.WriteLine();
+                Sequence s = new Sequence("f", 20);
+                foreach (int i in s)
+                {
+                    Console.Write($"{i} ");
+                }
+                Console.WriteLine();
 
             }
         }
