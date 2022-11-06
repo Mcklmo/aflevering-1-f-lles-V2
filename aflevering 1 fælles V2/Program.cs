@@ -30,22 +30,29 @@ namespace OOP_Kursus
 
         private static void KG8()
         {
-            Ex1();
+            //Ex1();
+            Ex2();
             void Ex1()
             {
                 Sequence se = new Sequence(1, 2, 60);
-                foreach (int i in se)
-                {
-                    Console.Write($"{i} ");
-                }
-                Console.WriteLine();
                 Sequence s = new Sequence("f", 20);
+                PrintSequence(se);
+                PrintSequence(s);
+            }
+            void Ex2()
+            {
+                PrintSequence(new RandomNumbers(5));
+                PrintSequence(new RandomNumbers(5, 10));
+                PrintSequence(new RandomNumbers(5, 12,10));
+
+            }
+            void PrintSequence<T>(T s) where T : IEnumerable
+            {
                 foreach (int i in s)
                 {
                     Console.Write($"{i} ");
                 }
                 Console.WriteLine();
-
             }
         }
 
