@@ -6,13 +6,15 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using _5_Exceptions;
 using _6_Generics;
 using Miniprojekt_1;
 using _7_Delegates;
 using Risk;
 using _8_Collections;
-
+using _9_Testing;
+,
 namespace OOP_Kursus
 {
     internal class Program
@@ -24,8 +26,12 @@ namespace OOP_Kursus
             //KG6();
             //_KG7();
             //PlayRisk();
-            KG8();
+            //KG8();
+            Kg9();
+        }
 
+        private static void Kg9()
+        {
         }
 
         private static void KG8()
@@ -34,17 +40,14 @@ namespace OOP_Kursus
             Ex2();
             void Ex1()
             {
-                Sequence se = new Sequence(1, 2, 60);
-                Sequence s = new Sequence("f", 20);
-                PrintSequence(se);
-                PrintSequence(s);
+                PrintSequence(new Sequence(1, 2, 60));
+                PrintSequence(new Sequence("f", 20));
             }
             void Ex2()
             {
                 PrintSequence(new RandomNumbers(5));
                 PrintSequence(new RandomNumbers(5, 10));
                 PrintSequence(new RandomNumbers(5, 12,10));
-
             }
             void PrintSequence<T>(T s) where T : IEnumerable
             {

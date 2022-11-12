@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE6DD3EC-0C02-4C82-9FE4-A32D4AE3B451}</ProjectGuid>
+    <ProjectGuid>{CC91970B-A546-4B29-B9D0-71CD7943BC39}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>aflevering_1_fælles_V2</RootNamespace>
-    <AssemblyName>aflevering 1 fælles V2</AssemblyName>
+    <RootNamespace>_9_Testing</RootNamespace>
+    <AssemblyName>9 Testing</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,41 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BadList.cs" />
+    <Compile Include="Circle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\5 Exceptions\5 Exceptions.csproj">
-      <Project>{1c8310ba-7143-4668-9f0b-32949b1a4434}</Project>
-      <Name>5 Exceptions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\7 Delegates\7 Delegates.csproj">
-      <Project>{dca67b6d-f8be-4e40-a0c3-c74741161329}</Project>
-      <Name>7 Delegates</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\7 Generics\6 Generics.csproj">
-      <Project>{4c905bf7-b40c-48e1-b0f1-de8b7595b55d}</Project>
-      <Name>6 Generics</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\8 Collections\8 Collections.csproj">
-      <Project>{410dedb8-d0c0-471e-87f4-444a7debcd79}</Project>
-      <Name>8 Collections</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\9 Testing\9 Testing.csproj">
-      <Project>{cc91970b-a546-4b29-b9d0-71cd7943bc39}</Project>
-      <Name>9 Testing</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Miniprojekt 1\Miniprojekt 1.csproj">
-      <Project>{d68bfb3d-1b82-4dae-b187-8fe241eb84b0}</Project>
-      <Name>Miniprojekt 1</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Risk\Risk.csproj">
-      <Project>{a415ced8-e301-4ecb-918d-292b5b591d03}</Project>
-      <Name>Risk</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
