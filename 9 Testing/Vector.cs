@@ -8,6 +8,10 @@
             X = x;
             Y = y;
         }
+        public (double,double) Get()
+        {
+            return (X, Y);
+        }
         public void Subtract(Vector v)
         {
             X -= v.X;

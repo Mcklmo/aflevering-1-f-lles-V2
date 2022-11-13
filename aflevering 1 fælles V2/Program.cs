@@ -14,7 +14,7 @@ using _7_Delegates;
 using Risk;
 using _8_Collections;
 using _9_Testing;
-,
+
 namespace OOP_Kursus
 {
     internal class Program
@@ -32,6 +32,13 @@ namespace OOP_Kursus
 
         private static void Kg9()
         {
+            Ex3();
+            void Ex3()
+            {
+                Vector v1 = new Vector(20, 30);
+                Vector v2 = new Vector(45, 70);
+                Console.WriteLine($"cross product of {v1.Get()} and {v2.Get()} is {v1.CrossProduct(v2)}");
+            }
         }
 
         private static void KG8()
