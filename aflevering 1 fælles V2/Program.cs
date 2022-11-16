@@ -14,6 +14,7 @@ using _7_Delegates;
 using Risk;
 using _8_Collections;
 using _9_Testing;
+using String = _9_Testing.String;
 
 namespace OOP_Kursus
 {
@@ -32,12 +33,22 @@ namespace OOP_Kursus
 
         private static void Kg9()
         {
-            Ex3();
+            //Ex3();
+            Ex4();
             void Ex3()
             {
                 Vector v1 = new Vector(20, 30);
                 Vector v2 = new Vector(45, 70);
                 Console.WriteLine($"cross product of {v1.Get()} and {v2.Get()} is {v1.CrossProduct(v2)}");
+            }
+            void Ex4()
+            {
+                String s1 = new String(new char[] { 'H', 'E', 'l', 'l', 'o' });
+                String s2 = new String(new char[] { 'H', 'e', 'l', 'l', 'o' });
+                Console.WriteLine(s1.Substring(1, 3));
+                Console.WriteLine(s1.ToLowerCase());
+                Console.WriteLine(s1.Equals(s2.Chars));
+
             }
         }
 
