@@ -19,7 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8 Collections", "8 Collecti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9 Testing", "9 Testing\9 Testing.csproj", "{CC91970B-A546-4B29-B9D0-71CD7943BC39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9 Testing.Tests", "9 Testing.Tests\9 Testing.Tests.csproj", "{E5951C6A-FD67-472F-B069-C328D553DCCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9 Testing.Tests", "9 Testing.Tests\9 Testing.Tests.csproj", "{E5951C6A-FD67-472F-B069-C328D553DCCE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B395377E-FC21-4879-AD44-E10480DA9ADD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

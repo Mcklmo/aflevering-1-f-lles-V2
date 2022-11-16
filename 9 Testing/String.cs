@@ -11,10 +11,7 @@
         {
             return Chars[i];
         }
-        public int Length()
-        {
-            return Chars.Length;
-        }
+        public int Length { get => Chars.Length; }
         public char[] Substring(int i,int j)
         {
             char[] result = new char[Chars.Length];
@@ -34,8 +31,9 @@
             }
             return result;
         }
-        public bool Equals(char[] s)
+        public bool Equals(String st)
         {
+            char[] s = st.Chars;
             if (s.Length != Chars.Length) 
                 return false;
             for(int i = 0; i < Chars.Length; i++)

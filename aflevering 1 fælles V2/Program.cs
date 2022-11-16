@@ -44,10 +44,10 @@ namespace OOP_Kursus
             void Ex4()
             {
                 String s1 = new String(new char[] { 'H', 'E', 'l', 'l', 'o' });
-                String s2 = new String(new char[] { 'H', 'e', 'l', 'l', 'o' });
+                String s2 = new String(new char[] { 'H', 'E', 'l', 'l', 'o' });
                 Console.WriteLine(s1.Substring(1, 3));
                 Console.WriteLine(s1.ToLowerCase());
-                Console.WriteLine(s1.Equals(s2.Chars));
+                Console.WriteLine(s1.Equals(s2));
 
             }
         }
